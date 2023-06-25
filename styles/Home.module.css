@@ -1,30 +1,139 @@
 .main {
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; */
   display: flex;
   justify-content: center;
   align-items: center;
-  /* padding: 6rem; */
+  background: url('../public/bg.jpg') no-repeat;
   min-height: 100vh;
-  /* background: tomato; */
-}
-
-.login {
-  background: red;
-  width: 30vw;
-  height: 70vh;
+  background-size: cover;
+  background-position: center;
+  animation: animateBg 5s linear infinite;
   
 }
 
-.login h1 {
+@keyframes animateBg {
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+
+
+.loginbox {
+  position: relative;
+  width: 400px;
+  height: 450px;
+  background: transparent;
+  border: 2px solid rgb(255, 255, 255, .5);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(15px);
+} 
+
+.loginbox h2 {
+  font-size: 2em;
+  color: #fff;
   text-align: center;
 }
 
-.cadastro {
-  background: green;
-  width: 30vw;
-  height: 70vh;
+.inputbox {
+  width: 310px;
+  margin: 30px 0;
+  border-bottom: 2px solid #fff;
 }
 
+/* .inputbox label {
+  position: absolute;
+  top: 50%;
+  left: 55px;
+  transform: translateY(-30%);
+  font-size: 1em;
+  color: #fff;
+  pointer-events: none;
 
+} */
 
+/* .inputbox input:focus~label,
+.inputbox input:valid~label {
+  top: 5px;
+} */
 
+.inputbox input {
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  color: #fff;
+  
+}
 
+.remember {
+  margin: -15px 0 15px;
+  font-size: .9em;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+.remember label input {
+  margin-right: 3px;
+}
+
+.remember a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.remember a:hover {
+  text-decoration: underline;
+}
+
+.loginbox button {
+  width: 100%;
+  height: 40px;
+  background: #fff;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 1em;
+  color: #000;
+  font-weight: 500;
+}
+
+.register {
+  font-size: .9em;
+  color: #fff;
+  text-align: center;
+  margin: 25px 0 10px;
+}
+
+.register p a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 700;
+}
+
+.register p a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 375px) {
+  .loginbox {
+    width: 100%;
+    height: 100vh;
+    border: none;
+    border-radius: 0;
+  }
+
+  .inputbox {
+    width: 290px;
+  }
+}

@@ -3,8 +3,6 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import React, { useState } from 'react';
-import { PoweroffOutlined } from '@ant-design/icons';
-import { Button, Space } from 'antd';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,16 +16,40 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
-        <div className={styles.login}>
-          <h1>Login</h1>
+        <div className={styles.loginbox}>
+          <form action="">
+            <h2>Login</h2>
+            <div className={styles.inputbox}>
+              <input type="email" placeholder='Email' required/>
+              
+
+            </div>
+
+            <div className={styles.inputbox}>
+              
+              <input type="password" placeholder='Senha' required/>
+              
+            </div>
+            
+            <div className={styles.remember}>
+                <label><input type="checkbox"/>Lembrar senha</label>
+                <a href="#">Esqueci minha senha</a>
+            </div>
+            <button type='submit'>Login</button>
+            <div className={styles.register}>
+              <p>Não tem uma conta?<a href="#">Cadastro</a></p>
+            </div>
+          </form>
         </div>
         
-        <div className={styles.cadastro}>
+        {/* <div className={styles.cadastro}>
           <h1>Cadasdro</h1>
           <input type="text" name="nome" id="nome" placeholder='Nome Completo'/>
           
-        </div>
+        </div> */}
       </main>
+
+      
     </>
   )
 }
