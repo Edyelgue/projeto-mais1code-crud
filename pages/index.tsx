@@ -37,11 +37,8 @@ export default function Home() {
             </div>
             <button type='submit'>Login</button>
             <div className={styles.register}>
-<<<<<<< HEAD
               <p>Não tem uma conta?<a href="register">Registra-se</a></p>
-=======
-              <p>Não tem uma conta? <a href="#">Cadastrar</a></p>
->>>>>>> 0d6563fb914fe5533f23bf9d966b382df83a79b0
+              
             </div>
           </form>
 
