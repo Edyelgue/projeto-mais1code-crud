@@ -18,11 +18,13 @@ export default function Home() {
       <main className={`${styles.main} ${inter.className}`}>
         <div className={styles.loginbox}>
           <form>
-            <h2>Login</h2>
+            <h2>Criar Conta</h2>
+            <div className={styles.inputbox}>
+              <input type="text" placeholder='Nome Completo' required/>
+            </div>
+
             <div className={styles.inputbox}>
               <input type="email" placeholder='Email' required/>
-              
-
             </div>
 
             <div className={styles.inputbox}>
@@ -31,14 +33,8 @@ export default function Home() {
               
             </div>
             
-            <div className={styles.remember}>
-                <label><input type="checkbox"/>Lembrar senha</label>
-                <a href="#">Esqueci minha senha</a>
-            </div>
-            <button type='submit'>Login</button>
-            <div className={styles.register}>
-              <p>Não tem uma conta?<a href="register">Registra-se</a></p>
-            </div>
+            <button type='submit'>Criar</button>
+            
           </form>
 
         
@@ -46,8 +42,6 @@ export default function Home() {
         
        
       </main>
-
-      
     </>
-  )
+  )  
 }
