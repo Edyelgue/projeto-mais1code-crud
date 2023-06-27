@@ -34,7 +34,10 @@ export default function register() {
             </div>
             
             <button type='submit'>Criar</button>
-            
+            <div className={styles.register}>
+              <p>Já tem uma conta?<a href="/">Fazer o login</a></p>
+              
+            </div>
           </form>
 
         
