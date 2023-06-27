@@ -6,7 +6,7 @@ import React, { useState } from 'react';
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+export default function register() {
   return (
     <>
       <Head>
