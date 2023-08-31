@@ -14,6 +14,7 @@ export default async function login(
         resposta(res, 200, idUser)
     } catch(error){
         resposta(res, 500, "Error")
+        console.log(JSON.stringify(error))
     }
 };
 
