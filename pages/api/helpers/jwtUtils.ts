@@ -1,8 +1,12 @@
 import type { NextApiRequest } from 'next'
 import jwt from 'jsonwebtoken'
+import { HttpError } from '../errors/HttpError';
 import moment from 'moment';
+import { JwtResponse } from '../types/calls/login';
+import {ErrorCode} from '../types/enums/errorcode'
+
 const CHAVE_ASSINATURA = "123456";
-const ISSUER = "Aula Nicholas"
+const ISSUER = "Projeto Edy"
 const VALIDADE_TOKEN_MINUTOS = 5;
 
 function validarJwt(req: NextApiRequest): void {
