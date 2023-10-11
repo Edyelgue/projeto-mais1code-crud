@@ -1,7 +1,6 @@
 // import { buscaUsuarios } from '@/db/login';
 import { buscaUsuarios } from '@/db/login';
 import type {NextApiRequest, NextApiResponse} from 'next';
-import { montarResposta } from './helpers/response';
 import { gerarJwt } from './helpers/jwtUtils';
 
 
